@@ -1,11 +1,13 @@
 <?php
 
-require_once __DIR__ . '/classes/DataBase.php';
+require_once __DIR__. '/functions.php';
 
-$dbh = new DataBase();
+require_once __DIR__ . '/classes/News.php';
+require_once __DIR__ . '/classes/View.php';
 
-$sql = 'SELECT * FROM news';
-$dbh->execute($sql);
+$news = new News();
 
+$view = new View();
+$view->assign('news', $news);
 
-require_once __DIR__ . '/templates/index.view.php';
+echo $view->render('index.view.php');
