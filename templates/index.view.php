@@ -16,7 +16,7 @@
     <?php for ($i = count($news->getNews()) - 1; $i >= 0; $i--): ?>
         <?php $article = $news->getNews()[$i]; ?>
         <li class="news__item list-group-item mb-2" style="border: 2px solid #0069D9; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;">
-            <a href="article.php?id=<?php echo $article['id']; ?>" class="news__link"><?php echo $article['title']; ?></a>
+            <a href="article.php?id=<?php echo $i; ?>" class="news__link"><?php echo $article['title']; ?></a>
             <p>Автор: <?php echo $article['author']; ?></p>
         </li>
     <?php endfor; ?>

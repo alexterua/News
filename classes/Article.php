@@ -13,6 +13,4 @@ class Article
     {
         return $this->article;
     }
-
-
 }

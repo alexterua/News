@@ -10,4 +10,4 @@ $article = $news->getNews()[$_GET['id']];
 
 $view = new View();
 $view->assign('article', $article);
-$view->render('article.view.php');
+echo $view->render('article.view.php');
